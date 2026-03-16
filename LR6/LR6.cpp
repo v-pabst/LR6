@@ -10,21 +10,24 @@ int main()
     int n;
     int i = 0;
     int kol = 0;
+    int len = 0;
     setlocale(LC_ALL, "");
-    char str[50];
+    char str[100];
     cout << "Введите строку: ";
     gets_s(str);
     cout << "n = ";
     cin >> n;
-    while (i < strlen(str)) {
-        int k = 0;
-        while (str[i] != ' ' && str[i] != '\0') {
-            k++;
-            i++;
+    while (str[i] != '\0') {
+        if (str[i] != ' ') {
+            len++;
         }
-        if (k != n) kol++;
+        else {
+            if (len > 0 && len != n) kol++;
+            len = 0;
+        }
         i++;
     }
+    if (len > 0 && len != n) kol++;
     cout << kol;
     return 0;
 }
