@@ -27,4 +27,5 @@ int main()
     }
     cout << kol;
     return 0;
+    ne poluchilos
 }
