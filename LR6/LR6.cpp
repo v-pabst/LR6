@@ -18,7 +18,7 @@ int main()
     cout << "n = ";
     cin >> n;
     while (str[i] != '\0') {
-        if (str[i] != ' ') {
+        if (str[i] != ' ' && str[i] != '!' && str[i] != '?' && str[i] != ',' && str[i] != ':' && str[i] != '.') {
             len++;
         }
         else {
