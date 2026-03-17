@@ -33,7 +33,6 @@ int main()
 }
 
 
-using namespace std;
 const int A = 6, B = 10;
 int main()
 {
